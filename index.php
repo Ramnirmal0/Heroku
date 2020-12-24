@@ -1,4 +1,4 @@
 <?php
-echo "my first heruko live page";
+echo "my first heruko using git commit : upadated now";
 
 ?>
