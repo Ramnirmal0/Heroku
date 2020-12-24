@@ -1,4 +1,6 @@
 <?php
-echo "my first heruko using git commit : upadated now";
+
+echo "my first heruko commit new change using git : new post";
+
 
 ?>
