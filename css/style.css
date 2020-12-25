@@ -1,4 +1,7 @@
 body {
-  background-color: aqua;
+  background-image: url("img/wallpaper.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */
