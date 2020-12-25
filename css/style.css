@@ -5,4 +5,69 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.iform {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: white;
+  opacity: 95%;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1100px) {
+  .iform {
+    /* For mobile phones: */
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}
+
+.font1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  color: #141414;
+}
+
+.font2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #585858;
+}
+
+ul {
+  line-height: 13px;
+  margin-left: 0px;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  padding-left: 10px;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid green;
+}
+
+.forget {
+  color: #30251f;
+}
+
+.forget:hover {
+  text-decoration: none;
+  color: #993600;
+}
+
+.redirect {
+  color: #237c00;
+}
+
+.redirect:hover {
+  text-decoration: none;
+  color: #0071bd;
+}
 /*# sourceMappingURL=style.css.map */
