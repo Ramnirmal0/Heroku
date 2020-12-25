@@ -9,6 +9,7 @@ contain additional details such as age,dob,contact, etc
 that can be updated by the user
 
 Points to remember :
+
 Html, CSS, JavaScript, PHP should be in separate files.
 
 CSS should be written using sass/scss. The project should
