@@ -1,3 +1,3 @@
  <?php
-require 'signup.php';
+require 'login.php';
 ?>
