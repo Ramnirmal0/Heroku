@@ -34,24 +34,33 @@
                 <form method="post">
                 <div class="row" style="margin:0px 20px 0px 20px;">
                     <div class="col-3" style= "text-align: right;"><img src="../img/user-solid.svg" width="30" height="30"></div>
-                    <div class="col-9" style= "text-align: left;"><input type="text" id="userid" name="userid" size="30" placeholder="username" required></div>
+                    <div class="col-9" style= "text-align: left;"><input type="text" id="username" name="username" size="30" placeholder="Enter username" required></div>
+                </div><br>
+
+                <div class="row" style="margin:0px 20px 0px 20px;">
+                    <div class="col-3" style= "text-align: right;"><img src="../img/envelope-solid.svg" width="30" height="30"></div>
+                    <div class="col-9" style= "text-align: left;"><input type="email" id="email" name="email" size="30" placeholder="Enter Email-Address" required></div>
                 </div><br>
 
                 <div class="row" style="margin:0px 20px 0px 20px;">
                     <div class="col-3" style= "text-align: right;"><img src="../img/key-solid.svg" width="30" height="30"></div>
-                    <div class="col-9" style= "text-align: left;"><input type="password" id="pwd" name="pwd" size="30" placeholder="Password" required></div>
+                    <div class="col-9" style= "text-align: left;"><input type="password" id="password" name="password" size="30" placeholder="Enter Password" required></div>
+                </div><br>
+
+                <div class="row" style="margin:0px 20px 0px 20px;">
+                    <div class="col-3" style= "text-align: right;"><img src="../img/key-solid.svg" width="30" height="30"></div>
+                    <div class="col-9" style= "text-align: left;"><input type="password" id="cpassword" name="cpassword" size="30" placeholder="Confirm password" required></div>
                 </div><br>
 
                 
 
-                    <input type="checkbox" checked ><span class="font2"> Remember Me</span><br><br>
+                    <input type="checkbox" checked><span class="font2"> I agree the <a href="#">terms and conditions</a></span><br><br>
 
-                    <a href="#" class="forget">Forgot Password?</a><br>
 
-                    <p>Not yet registered ? <a href="signup.html" class="redirect"> Create an account</a></p>
+                    <p>Already a Member ? <a href="../login.php" class="redirect"> Login Now</a></p>
 
                     <br>
-                    <input type="button" class="btn btn-success btn-lg btn-block" id="login" name="login" value="Login" >
+                    <input type="button" class="btn btn-primary btn-lg btn-block" id="login" name="login" value="Create Account" >
                 
                 </form>
 
