@@ -19,12 +19,13 @@ $(function(){
         }
 
             e.preventDefault();
+
             $.ajax({
                 type: 'POST',
-                url: 'user.php',
+                url: '../user.php',
                 data: {username: username,emailid: emailid,passwords: passwords},
                 success: function(data){
-                    location.window.href = "user.php";
+                    location.window.href = "../user.php";
                         
                 },
                 error: function(data){
