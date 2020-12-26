@@ -11,7 +11,8 @@ if(isset($_POST['register'])){
     $_SESSION['emailid'] = $emailid;
     $_SESSION['password'] = $password;
 
-    header('Location:user.php');
+    header("../user.php");
+    exit();
 }
 
 ?>
