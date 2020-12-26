@@ -14,35 +14,16 @@ $(function(){
         if(passwords==cpassword){
         }
         else{
+            alert("check password is correct");
             return;
         }
 
             e.preventDefault();	
-
-            $.ajax({
-                type: 'POST',
-                url: 'user.php',
-                data: {username: username,emailid: emailid,password: password},
-                success: function(data){
-                Swal.fire({
-                            'title': 'Successful',
-                            'text': data,
-                            'type': 'success'
-                            })
-                        
-                },
-                error: function(data){
-                    Swal.fire({
-                            'title': 'Errors',
-                            'text': 'There were errors while saving the data.',
-                            'type': 'error'
-                            })
-                }
-            });
-
-            
+            window.location = '../user.php';
+  
         }else{
-            
+            alert("fill the form completely");
+
         }
     });		
 
