@@ -10,6 +10,8 @@ if(isset($_POST['register'])){
     $_SESSION['username'] = $username;
     $_SESSION['emailid'] = $emailid;
     $_SESSION['password'] = $password;
+
+    header('Location:user.php');
 }
 
 ?>

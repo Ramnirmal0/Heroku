@@ -19,7 +19,6 @@ $(function(){
         }
 
             e.preventDefault();	
-            window.location = '../user.php';
   
         }else{
             alert("fill the form completely");
