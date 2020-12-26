@@ -13,7 +13,7 @@ if(isset($_POST['continue'])){
 	$location=$_POST['location'];
 	$mob=$_POST['mob'];
 
-	echo("$username $emailid $password $dob $location $mob");
+	var_dump($_SESSION);
 
 
 }
