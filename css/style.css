@@ -26,6 +26,13 @@ body {
     margin-right: 1%;
     font-size: 1vm;
   }
+  .iform img {
+    width: 20;
+    height: 20;
+  }
+  .iform input {
+    font-size: 10px;
+  }
 }
 
 .font1 {
