@@ -15,15 +15,10 @@ $username = "QExKt8jTh3";
 $password = "XqrylbkApz";
 
 
-// try {
-//     $dsn = "mysql:host=" . $servername . ";dbname=" . $database;
-//     $pdo = new PDO($dsn, $username, $password);
-//     echo "connection established";
-//   } catch(PDOException $e) {
-//     echo "DB Connection Failed: " . $e->getMessage();
-//   }
 
-$db = new PDO('mysql:host='. $servername .';dbname=' . $database . ';charset=utf8', $username, $password);
+// $db = new PDO('mysql:host='. $servername .';dbname=' . $database . ';charset=utf8', $username, $password);
+$db = new PDO('mysql:host=remotemysql.com;dbname=QExKt8jTh3','QExKt8jTh3','XqrylbkApz');
+//$connection = new PDO('mysql:host=localhost;dbname=my_db','my_username','xxxxxxx');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 echo "Database connection established";
 
