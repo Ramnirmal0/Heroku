@@ -17,24 +17,23 @@ if(isset($_POST)){
 	try {
 		$dsn = "mysql:host=" . $servername . ";dbname=" . $database;
 		$pdo = new PDO($dsn, $username, $password);
-		echo "connection established";
+		
 	} catch(PDOException $e) {
 		echo "DB Connection Failed: " . $e->getMessage();
 	}
 
 	
-		$username= $_POST['username'];
-		$emailid = $_POST['emailid'];
-		$passwords = sha1($_POST['passwords']);
+		$uname= $_POST['username'];
+		$email = $_POST['emailid'];
+		$pwd = sha1($_POST['passwords']);
 
-		$sql = "INSERT INTO accounts (username, email, passwords) VALUES (:uname, :email, :pwd)";
+		$sql = "INSERT INTO `accounts` (username, email, passwords) VALUES (:uname, :email, :pwd)";
 
       	$stmt = $pdo->prepare($sql);
       
-		$stmt->execute(['uname' => $username, 'email' => $emailid, 'pwd' => $passwords]);
+		$stmt->execute(['uname' => $uname, 'email' => $email, 'pwd' => $pwd]);
 
 		  
-		echo "data entered";
 
 
 
