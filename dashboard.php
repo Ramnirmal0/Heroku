@@ -43,9 +43,10 @@
             <div class="container-fluid" >
                 <?php
 
-                echo"welcome user";
+                echo"Welcome User ! get started";
                 
                 ?>
+                <br>
                     <center>
                     <div class="card" style="width: 20rem;">
                     <img class="card-img-top" src="../img/logo.svg" alt="Card image cap" height="100" width="100">
