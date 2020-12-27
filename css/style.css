@@ -29,10 +29,10 @@ body {
   .iform input {
     font-size: 10px;
   }
-  .iform h3 {
+  .iform h3, .iform .btn {
     font-size: 20px;
   }
-  .iform p {
+  .iform p, .iform a {
     font-size: 12px;
   }
 }
