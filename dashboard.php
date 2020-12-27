@@ -48,8 +48,8 @@
                 ?>
                 
                     <center>
-                    <br><br>
-                    <a class="btn btn-danger" href="https://login-app-php.herokuapp.com/logout=true/"> Logout </a>
+                    <br>
+                    <a class="btn btn-danger" href="#"> Logout </a>
 
                     <br><br>
                     <div class="card" style="width: 20rem;">
