@@ -19,7 +19,8 @@ if(isset($_POST)){
 
 		try 
 		{
-			$db = new PDO('mysql:host=remotemysql.com;dbname=QExKt8jTh3','QExKt8jTh3','XqrylbkApz');
+			$db = new PDO("mysql:host=remotemysql.com;dbname=QExKt8jTh3;charset=utf8",'QExKt8jTh3','XqrylbkApz');
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			
 		}
 
