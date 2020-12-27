@@ -1,11 +1,17 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Create an Account | Guvi.in</title>
+        <title>User Dashboard | Guvi.in</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/style.css" type="text/css">
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
         <script src="../js/jscript.js" type="text/javascript"></script>
@@ -32,44 +38,15 @@
                         </td>
                     </tr> 
                 </table>
-                </center>
-                <br>
-                <div class="container-fluid" >
-                <h3>Create an Account</h3><br>
+            </center>
+            <br>
+            <div class="container-fluid" >
+                <?php
+
+                echo"welcome user";
                 
-
-                <form method="post">
-                <img src="../img/user-solid.svg" width="30" height="30" >
-                <input type="text" id="username" name="username" size="30" placeholder="Enter username" required>
-                <br><br>
-
-                <img src="../img/envelope-solid.svg" width="30" height="30">
-                <input type="email" id="emailid" name="emailid" size="30" placeholder="Enter Email-Address" required>
-                <br><br>
-
-                <img src="../img/key-solid.svg" width="30" height="30">
-                <input type="password" id="passwords" name="passwords" size="30" placeholder="Enter Password" required>
-                <br><br>
-
-                <img src="../img/key-solid.svg" width="30" height="30">
-                <input type="password" id="cpassword" name="cpassword" size="30" placeholder="Confirm password" required>
-                <br><br>
-            
-                
-
-                    <input type="checkbox" checked> <label> I agree the </label> <a href="#">terms and conditions</a></span><br><br>
-
-
-                    <p>Already a Member ? <a href="../login.php" class="redirect"> Login Now</a></p>
-
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg btn-block" id="register" name="register" value="Create Account" >
-                
-                </form>
-
-                </div>
-                </div>
-            
+                ?>
+            </div>
 
 
     </body>
