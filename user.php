@@ -14,8 +14,19 @@ if(isset($_POST)){
 	$password = "XqrylbkApz";
 
 
-	$db = new PDO('mysql:host=remotemysql.com;dbname=QExKt8jTh3','QExKt8jTh3','XqrylbkApz');
-	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	// $db = new PDO('mysql:host=remotemysql.com;dbname=QExKt8jTh3','QExKt8jTh3','XqrylbkApz');
+	// $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		try 
+		{
+			$db = new PDO('mysql:host=remotemysql.com;dbname=QExKt8jTh3','QExKt8jTh3','XqrylbkApz');
+			
+		}
+
+		catch(Exception $e)
+		{
+			echo "There was an error connecting to the database";
+		}
 
 	
 		$uname= $_POST['username'];
