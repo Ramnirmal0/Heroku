@@ -1,12 +1,26 @@
 <?php
 // session_start();
-require 'html/user.html';
-require_once('config.php');
+//require 'html/user.html';
+//require_once('config.php');
 ?>
 
 <?php
 
 if(isset($_POST)){
+
+	$servername = "remotemysql.com";
+	$database = "QExKt8jTh3";
+	$username = "QExKt8jTh3";
+	$password = "XqrylbkApz";
+
+
+	try {
+		$dsn = "mysql:host=" . $servername . ";dbname=" . $database;
+		$pdo = new PDO($dsn, $username, $password);
+		echo "connection established";
+	} catch(PDOException $e) {
+		echo "DB Connection Failed: " . $e->getMessage();
+	}
 
 	
 		$username= $_POST['username'];
