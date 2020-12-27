@@ -17,9 +17,9 @@ if(isset($_POST)){
 
       	$stmt = $pdo->prepare($sql);
       
-		  $stmt->execute(['uname' => $username, 'email' => $emailid, 'pwd' => $passwords]);
+		$stmt->execute(['uname' => $username, 'email' => $emailid, 'pwd' => $passwords]);
 		  
-		  echo "data entered";
+		echo "data entered";
 
 
 

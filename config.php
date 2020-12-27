@@ -18,6 +18,7 @@ $password = "XqrylbkApz";
 try {
     $dsn = "mysql:host=" . $servername . ";dbname=" . $database;
     $pdo = new PDO($dsn, $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "connection established";
   } catch(PDOException $e) {
     echo "DB Connection Failed: " . $e->getMessage();
