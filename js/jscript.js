@@ -34,7 +34,7 @@ $(function(){
                 error: function(data){
                     Swal.fire({
                             'title': 'Errors',
-                            'text': 'There were errors while saving the data.',
+                            'text': data,
                             'type': 'error'
                             })
                 }
