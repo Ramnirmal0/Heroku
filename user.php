@@ -8,6 +8,12 @@
 
 if(isset($_POST)){
 
+	
+					
+	$uname= $_POST['username'];
+	$email = $_POST['emailid'];
+	$pwd = sha1($_POST['passwords']);
+
 	$servername = "remotemysql.com";
 	$database = "QExKt8jTh3";
 	$username = "QExKt8jTh3";
@@ -21,6 +27,19 @@ if(isset($_POST)){
 		{
 			$db = new PDO("mysql:host=remotemysql.com;dbname=QExKt8jTh3;charset=utf8",'QExKt8jTh3','XqrylbkApz');
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+			$sql = "INSERT INTO accounts (username, email, passwords) VALUES (:uname, :email, :pwd)";
+
+			$stmt = $pdo->prepare($sql);
+		
+			$stmt->execute(['uname' => $uname, 'email' => $email, 'pwd' => $pwd]);
+			if($stmt){
+				echo "sucessfully saved";
+			}else{
+				echo "failed to saved";
+			}
+
+		  
 			
 		}
 
@@ -29,23 +48,7 @@ if(isset($_POST)){
 			echo "There was an error connecting to the database";
 		}
 
-	
-		$uname= $_POST['username'];
-		$email = $_POST['emailid'];
-		$pwd = sha1($_POST['passwords']);
 
-		$sql = "INSERT INTO accounts (username, email, passwords) VALUES (:uname, :email, :pwd)";
-
-      	$stmt = $pdo->prepare($sql);
-      
-		$stmt->execute(['uname' => $uname, 'email' => $email, 'pwd' => $pwd]);
-		if($stmt){
-			echo "sucessfully saved";
-		}else{
-			echo "failed to saved";
-		}
-
-		  
 
 
 
