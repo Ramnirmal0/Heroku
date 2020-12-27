@@ -14,20 +14,15 @@ if(isset($_POST)){
 	$password = "XqrylbkApz";
 
 
-	try {
-		$dsn = "mysql:host=" . $servername . ";dbname=" . $database;
-		$pdo = new PDO($dsn, $username, $password);
-		
-	} catch(PDOException $e) {
-		echo "DB Connection Failed: " . $e->getMessage();
-	}
+	$db = new PDO('mysql:host='. $servername .';dbname=' . $database . ';charset=utf8', $username, $password);
+	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	
 		$uname= $_POST['username'];
 		$email = $_POST['emailid'];
 		$pwd = sha1($_POST['passwords']);
 
-		$sql = "INSERT INTO `accounts` (username, email, passwords) VALUES (:uname, :email, :pwd)";
+		$sql = "INSERT INTO accounts (username, email, passwords) VALUES (:uname, :email, :pwd)";
 
       	$stmt = $pdo->prepare($sql);
       

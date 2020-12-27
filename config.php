@@ -15,17 +15,17 @@ $username = "QExKt8jTh3";
 $password = "XqrylbkApz";
 
 
-try {
-    $dsn = "mysql:host=" . $servername . ";dbname=" . $database;
-    $pdo = new PDO($dsn, $username, $password);
-    echo "connection established";
-  } catch(PDOException $e) {
-    echo "DB Connection Failed: " . $e->getMessage();
-  }
+// try {
+//     $dsn = "mysql:host=" . $servername . ";dbname=" . $database;
+//     $pdo = new PDO($dsn, $username, $password);
+//     echo "connection established";
+//   } catch(PDOException $e) {
+//     echo "DB Connection Failed: " . $e->getMessage();
+//   }
 
-// $db = new PDO('mysql:host='. $servername .';dbname=' . $database . ';charset=utf8', $username, $password);
-// $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// echo "Database connection established";
+$db = new PDO('mysql:host='. $servername .';dbname=' . $database . ';charset=utf8', $username, $password);
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+echo "Database connection established";
 
 // we connect to example.com and port 3307
 // create connection
