@@ -32,7 +32,7 @@ body {
   .iform h3, .iform .btn {
     font-size: 20px;
   }
-  .iform p, .iform a {
+  .iform p, .iform a, .iform label {
     font-size: 12px;
   }
 }
