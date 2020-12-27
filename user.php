@@ -1,8 +1,7 @@
 <?php
 // session_start();
 require_once('../config.php');
-
-require 'html/user.html';
+//require 'html/user.html';
 ?>
 
 <?php
