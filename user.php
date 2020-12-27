@@ -1,7 +1,7 @@
 <?php
 // session_start();
 require 'html/user.html';
-require_once('../config.php');
+require_once('config.php');
 ?>
 
 <?php
@@ -18,6 +18,7 @@ if(isset($_POST)){
       	$stmt = $pdo->prepare($sql);
       
 		$stmt->execute(['uname' => $username, 'email' => $emailid, 'pwd' => $passwords]);
+
 		  
 		echo "data entered";
 
