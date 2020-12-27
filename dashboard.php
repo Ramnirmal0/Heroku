@@ -47,10 +47,19 @@
                 
                 ?>
 
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 5rem;">
                     <img class="card-img-top" src="../img/logo.svg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Guvi Courses</h5>
+                        <h5 class="card-title">Guvi Courses 1</h5>
+                        <p class="card-text">Get Access to unlimited contents and study materials .</p>
+                        <a href="#" class="btn btn-primary">Buy Course</a>
+                    </div>
+                    </div> &nbsp;&nbsp;
+
+                    <div class="card" style="width: 5rem;">
+                    <img class="card-img-top" src="../img/logo.svg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Guvi Courses 2</h5>
                         <p class="card-text">Get Access to unlimited contents and study materials .</p>
                         <a href="#" class="btn btn-primary">Buy Course</a>
                     </div>
