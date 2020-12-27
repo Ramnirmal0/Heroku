@@ -25,8 +25,11 @@ $(function(){
                 url: '../user.php',
                 data: {username: username,emailid: emailid,passwords: passwords},
                 success: function(data){
-                    window.location = '../user.php';
-                        
+                    Swal.fire({
+                        'title': 'Successful',
+                        'text': data,
+                        'type': 'success'
+                        })     
                 },
                 error: function(data){
                     Swal.fire({
