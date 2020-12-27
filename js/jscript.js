@@ -6,17 +6,17 @@ $(function(){
         if(valid){
 
 
-        var username = $('#username').val();
-        var emailid	= $('#emailid').val();
-        var passwords = $('#passwords').val();
-        var cpassword = $('#cpassword').val();
+            var username = $('#username').val();
+            var emailid	= $('#emailid').val();
+            var passwords = $('#passwords').val();
+            var cpassword = $('#cpassword').val();
 
-        if(passwords==cpassword){
-        }
-        else{
-            alert("check password is correct");
-            return;
-        }
+            if(passwords==cpassword){
+            }
+            else{
+                alert("check password is correct");
+                return;
+            }
 
             e.preventDefault();
 
