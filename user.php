@@ -1,11 +1,11 @@
 <?php
 // session_start();
-require_once('../config.php');
 require 'html/user.html';
+require_once('../config.php');
 ?>
 
 <?php
-echo "got here 1";
+
 if(isset($_POST)){
 
 	
@@ -23,8 +23,8 @@ if(isset($_POST)){
 		}else{
 			echo 'There were erros while saving the data.';
 		}
-		echo "got here 2";
-}else{
+}
+else{
 	echo 'No data';
 }
 
