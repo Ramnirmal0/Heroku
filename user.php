@@ -38,6 +38,7 @@ if(isset($_POST)){
 			}else{
 				echo "failed to saved";
 			}
+			echo "failed to connects";
 
 		  
 			
