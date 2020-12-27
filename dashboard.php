@@ -46,10 +46,11 @@
                 echo"Welcome User ! get started";
                 
                 ?>
-                <br>
+                
                     <center>
+                    <br><br><br>
                     <div class="card" style="width: 20rem;">
-                    <img class="card-img-top" src="../img/logo.svg" alt="Card image cap" height="100" width="100">
+                    <img class="card-img-top" src="../img/logo.svg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Guvi Courses 1</h5>
                         <p class="card-text">Get Access to unlimited contents and study materials.</p>
