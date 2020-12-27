@@ -32,6 +32,11 @@ if(isset($_POST)){
       	$stmt = $pdo->prepare($sql);
       
 		$stmt->execute(['uname' => $uname, 'email' => $email, 'pwd' => $pwd]);
+		if($stmt){
+			echo "sucessfully saved";
+		}else{
+			echo "failed to saved";
+		}
 
 		  
 
