@@ -48,7 +48,10 @@
                 ?>
                 
                     <center>
-                    <br><br><br>
+                    <br><br>
+                    <a class="btn btn-danger" href="https://login-app-php.herokuapp.com/logout=true/"> Logout </a>
+
+                    <br><br>
                     <div class="card" style="width: 20rem;">
                     <img class="card-img-top" src="../img/logo.svg" alt="Card image cap">
                     <div class="card-body">
