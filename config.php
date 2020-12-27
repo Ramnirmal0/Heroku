@@ -17,10 +17,10 @@ $password = "XqrylbkApz";
 
 
 // $db = new PDO('mysql:host='. $servername .';dbname=' . $database . ';charset=utf8', $username, $password);
-$db = new PDO('mysql:host=remotemysql.com;dbname=QExKt8jTh3','QExKt8jTh3','XqrylbkApz');
-//$connection = new PDO('mysql:host=localhost;dbname=my_db','my_username','xxxxxxx');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-echo "Database connection established";
+// $db = new PDO('mysql:host=remotemysql.com;dbname=QExKt8jTh3','QExKt8jTh3','XqrylbkApz');
+// //$connection = new PDO('mysql:host=localhost;dbname=my_db','my_username','xxxxxxx');
+// $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// echo "Database connection established";
 
 // we connect to example.com and port 3307
 // create connection
