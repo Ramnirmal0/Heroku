@@ -25,7 +25,7 @@ $(function(){
                 url: '../user.php',
                 data: {username: username,emailid: emailid,passwords: passwords},
                 success: function(data){
-                    location.window.href = "../user.php"
+                    window.location = '../user.php';
                         
                 },
                 error: function(data){
