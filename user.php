@@ -16,9 +16,9 @@ if(isset($_POST)){
 
 
 
-				$dbhost = 'remotemysql.com:3036';
-				$dbuser = 'QExKt8jTh3';
-				$dbpass = 'XqrylbkApz';
+				$dbhost = 'sql104.epizy.com';
+				$dbuser = 'epiz_27561235';
+				$dbpass = 'project@1234';
 				$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 			 
 				if(! $conn ) {

@@ -1,5 +1,8 @@
 <?php
 
+// MySQL DB Name	MySQL User Name	MySQL Password	MySQL Host Name	PHPMyAdmin
+// epiz_27561235_guvi	epiz_27561235	(Your vPanel Password)	sql104.epizy.com
+
 // Created!
 // You have successfully created a new database. The details are below.
 // Username: QExKt8jTh3
@@ -9,10 +12,10 @@
 // Port: 3306
 // These are the username and password to log in to your database and phpMyAdmin
 
-$servername = "remotemysql.com";
-$database = "QExKt8jTh3";
-$username = "QExKt8jTh3";
-$password = "XqrylbkApz";
+// $servername = "remotemysql.com";
+// $database = "QExKt8jTh3";
+// $username = "QExKt8jTh3";
+// $password = "XqrylbkApz";
 
 
 
