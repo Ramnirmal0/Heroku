@@ -19,7 +19,7 @@ if(isset($_POST)){
 				$dbhost = 'sql104.epizy.com';
 				$dbuser = 'epiz_27561235';
 				$dbpass = 'project@1234';
-				$database = 'accounts';
+				$database = 'epiz_27561235_guvi';
 
 				$conn = new mysqli($dbhost, $dbuser, $dbpass, $database);
 
