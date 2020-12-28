@@ -7,9 +7,9 @@ if(isset($_POST)){
 
 	
 					
-				$uname= $_POST['username'];
-				$email = $_POST['emailid'];
-				$pwd = sha1($_POST['passwords']);
+				// $uname= $_POST['username'];
+				// $email = $_POST['emailid'];
+				// $pwd = sha1($_POST['passwords']);
 
 
 
@@ -19,6 +19,9 @@ if(isset($_POST)){
 				$database = 'QExKt8jTh3';
 
 				$conn = new mysqli($dbhost, $dbuser, $dbpass, $database);
+				if($conn->connect()){
+					echo "Connection done";
+				}
 
 			// Check connection
 			if ($conn->connect_error) {
@@ -27,20 +30,20 @@ if(isset($_POST)){
 
 			//$sql = "INSERT INTO accounts (username, email, passwords) VALUES (:uname, :email, :pwd)";
 
-			$stmt = $conn->prepare("INSERT INTO accounts (username, email, passwords) VALUES (?, ?, ?,?,?,?,?,?)");
-			$stmt->bind_param("sss",$username, $email, $password);
+			// $stmt = $conn->prepare("INSERT INTO accounts (username, email, passwords) VALUES (?, ?, ?,?,?,?,?,?)");
+			// $stmt->bind_param("sss",$username, $email, $password);
 
-			$username = $uname;
-			$email = $email;
-			$password = $pwd;
-			$stmt->execute();
+			// $username = $uname;
+			// $email = $email;
+			// $password = $pwd;
+			// $stmt->execute();
 
-		     if($stmt){
+		    //  if($stmt){
 				 
-				 echo "$username - $email - $password ";
-			 }
+			// 	 echo "$username - $email - $password ";
+			//  }
 
-			$stmt->close();
+			// $stmt->close();
 			$conn->close(); 
 
 
