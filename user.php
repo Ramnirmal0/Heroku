@@ -37,7 +37,9 @@ if(isset($_POST)){
 			$password = $pwd;
 			$stmt->execute();
 
-			echo "New records created successfully";
+		     if($stmt){
+				 echo "New records created successfully";
+			 }
 
 			$stmt->close();
 			$conn->close();
