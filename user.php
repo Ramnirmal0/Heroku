@@ -13,7 +13,7 @@ if(isset($_POST)){
 
 
 
-				$dbhost = 'remotemysql.com:3306';
+				$dbhost = 'remotemysql.com';
 				$dbuser = 'QExKt8jTh3';
 				$dbpass = 'XqrylbkApz';
 				$database = 'QExKt8jTh3';
