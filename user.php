@@ -14,7 +14,7 @@ if(isset($_POST)){
 			$email = $_POST['emailid'];
 			$pwd = sha1($_POST['passwords']);
 
-			$servername = "remotemysql.com";
+			$servername = "remotemysql.com:3306";
 			$database = "QExKt8jTh3";
 			$username = "QExKt8jTh3";
 			$password = "XqrylbkApz";
