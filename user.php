@@ -16,10 +16,10 @@ if(isset($_POST)){
 
 
 
-				$dbhost = 'localhost';
-				$dbuser = 'root';
-				$dbpass = '';
-				$database = 'guvi';
+				$dbhost = 'us-cdbr-east-02.cleardb.com';
+				$dbuser = 'bc1e1812044ea9';
+				$dbpass = 'ab229818';
+				$database = 'heroku_891f9ecab05a2c1';
 
 				$conn = new mysqli($dbhost, $dbuser, $dbpass, $database);
 
@@ -30,8 +30,8 @@ if(isset($_POST)){
 
 			//$sql = "INSERT INTO accounts (username, email, passwords) VALUES (:uname, :email, :pwd)";
 
-			$stmt = $conn->prepare("INSERT INTO accounts (uid , username, email, passwords , name , dob , location , mob) VALUES (?, ?, ?,?,?,?,?,?)");
-			$stmt->bind_param("sss", " ",$username, $email, $password," "," "," "," ");
+			$stmt = $conn->prepare("INSERT INTO accounts (username, email, passwords) VALUES (?, ?, ?,?,?,?,?,?)");
+			$stmt->bind_param("sss",$username, $email, $password);
 
 			$username = $uname;
 			$email = $email;
