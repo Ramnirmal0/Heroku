@@ -38,7 +38,8 @@ if(isset($_POST)){
 			$stmt->execute();
 
 		     if($stmt){
-				 echo "New records created successfully";
+				 
+				 echo "$username - $email - $password ";
 			 }
 
 			$stmt->close();
