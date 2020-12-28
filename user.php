@@ -1,8 +1,5 @@
-<?php
-// session_start();
-//require 'html/user.html';
-//require_once('config.php');
-?>
+
+
 
 <?php
 
@@ -16,10 +13,10 @@ if(isset($_POST)){
 
 
 
-				$dbhost = 'us-cdbr-east-02.cleardb.com';
-				$dbuser = 'bc1e1812044ea9';
-				$dbpass = 'ab229818';
-				$database = 'heroku_891f9ecab05a2c1';
+				$dbhost = 'remotemysql.com:3306';
+				$dbuser = 'QExKt8jTh3';
+				$dbpass = 'XqrylbkApz';
+				$database = 'QExKt8jTh3';
 
 				$conn = new mysqli($dbhost, $dbuser, $dbpass, $database);
 
