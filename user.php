@@ -14,36 +14,47 @@ if(isset($_POST)){
 			$email = $_POST['emailid'];
 			$pwd = sha1($_POST['passwords']);
 
-			$servername = "remotemysql.com:3306";
-			$database = "QExKt8jTh3";
-			$username = "QExKt8jTh3";
-			$password = "XqrylbkApz";
-
-
-			$conn = new mysqli($servername, $username, $password, $database);
-
-			// Check connection
-			if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
+			$dbhost = 'remotemysql.com:3306';
+			$dbuser = 'QExKt8jTh3';
+			$dbpass = 'XqrylbkApz';
+			$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
+			
+			if(! $conn ) {
+			   die('Could not connect: ' . mysqli_error());
 			}
+			echo 'Connected successfully';
+			mysqli_close($conn);
 
-			//$sql = "INSERT INTO accounts (username, email, passwords) VALUES (:uname, :email, :pwd)";
+			// $servername = "remotemysql.com:3306";
+			// $database = "QExKt8jTh3";
+			// $username = "QExKt8jTh3";
+			// $password = "XqrylbkApz";
 
-			$stmt = $conn->prepare("INSERT INTO accounts (username, email, passwords) VALUES (?, ?, ?)");
-			$stmt->bind_param("sss", $username, $email, $password);
 
-			$username = $uname;
-			$email = $email;
-			$password = $pwd;
-			$stmt->execute();
+			// $conn = new mysqli($servername, $username, $password, $database);
 
-		     if($stmt){
+			// // Check connection
+			// if ($conn->connect_error) {
+			// die("Connection failed: " . $conn->connect_error);
+			// }
+
+			// //$sql = "INSERT INTO accounts (username, email, passwords) VALUES (:uname, :email, :pwd)";
+
+			// $stmt = $conn->prepare("INSERT INTO accounts (username, email, passwords) VALUES (?, ?, ?)");
+			// $stmt->bind_param("sss", $username, $email, $password);
+
+			// $username = $uname;
+			// $email = $email;
+			// $password = $pwd;
+			// $stmt->execute();
+
+		    //  if($stmt){
 				 
-				 echo "$username - $email - $password ";
-			 }
+			// 	 echo "$username - $email - $password ";
+			//  }
 
-			$stmt->close();
-			$conn->close();
+			// $stmt->close();
+			// $conn->close();
 
 
 	// $db = new PDO('mysql:host=remotemysql.com;dbname=QExKt8jTh3','QExKt8jTh3','XqrylbkApz');
