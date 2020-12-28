@@ -16,7 +16,7 @@ if(isset($_POST)){
 
 
 
-				$dbhost = 'sql104.epizy.com';
+				$dbhost = 'http://185.27.134.10/';
 				$dbuser = 'epiz_27561235';
 				$dbpass = 'project@1234';
 				$database = 'epiz_27561235_guvi';
