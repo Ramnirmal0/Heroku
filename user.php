@@ -27,7 +27,7 @@ if(isset($_POST)){
 
 				// Insert some values
 				$mysqli -> query("INSERT INTO account (name,email,password)
-				VALUES ('admin','admin@mail.com','admin123')");
+				VALUES ('$uname','$email','$pwd')");
 				
 
 				// Commit transaction
