@@ -4,9 +4,13 @@ if(isset($_POST)){
 
 	
 					
-				$uname= $_POST['username'];
-				$email = $_POST['emailid'];
-				$pwd = sha1($_POST['passwords']);
+				// $uname= $_POST['username'];
+				// $email = $_POST['emailid'];
+				// $pwd = sha1($_POST['passwords']);
+
+				$uname= "sudo";
+				$email = "sudo@mail.com";
+				$pwd = "sudobash";
 
 
 
