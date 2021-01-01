@@ -25,17 +25,32 @@ if(isset($_POST)){
 				// Turn autocommit off
 				$mysqli -> autocommit(FALSE);
 
-				// Insert some values
-				$mysqli -> query("INSERT INTO account (name,email,password)
-				VALUES (('$uname'),('$email'),('$pwd'))");
+				// // Insert some values
+				// $mysqli -> query("INSERT INTO account (name,email,password)
+				// VALUES (('$uname'),('$email'),('$pwd'))");
 				
 
-				// Commit transaction
-				if (!$mysqli -> commit()) {
-				echo "Commit transaction failed";
-				exit();
-				}
+				// // Commit transaction
+				// if (!$mysqli -> commit()) {
+				// echo "Commit transaction failed";
+				// exit();
+				// }
 
+				// $mysqli -> close();
+				// prepare and bind
+				$stmt = $mysqli -> prepare("INSERT INTO account (name,email,password) VALUES (?, ?, ?)");
+				$stmt -> bind_param("sss", $username, $emailid, $password);
+
+				// set parameters and execute
+				$username = $uname;
+				$emailid = $email;
+				$password = $pwd;
+				$stmt -> execute();
+
+
+				echo "New records created successfully";
+
+				$stmt -> close();
 				$mysqli -> close();
 
 				
