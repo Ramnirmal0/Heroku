@@ -1,71 +1,44 @@
-
-
-
 <?php
 
 if(isset($_POST)){
 
 	
 					
-				// $uname= $_POST['username'];
-				// $email = $_POST['emailid'];
-				// $pwd = sha1($_POST['passwords']);
+				$uname= $_POST['username'];
+				$email = $_POST['emailid'];
+				$pwd = sha1($_POST['passwords']);
 
 
 
-				$dbhost = 'remotemysql.com';
-				$dbuser = 'QExKt8jTh3';
-				$dbpass = 'XqrylbkApz';
-				$database = 'QExKt8jTh3';
+				// $dbhost = 'remotemysql.com';
+				// $dbuser = 'QExKt8jTh3';
+				// $dbpass = 'XqrylbkApz';
+				// $database = 'QExKt8jTh3';
 
-				$conn = new mysqli($dbhost, $dbuser, $dbpass, $database);
-				if($conn->connect()){
-					echo "Connection done";
+				$mysqli = new mysqli("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3");
+
+				if ($mysqli -> connect_errno) {
+				echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+				exit();
 				}
 
-			// Check connection
-			if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-			}
+				// Turn autocommit off
+				$mysqli -> autocommit(FALSE);
 
-			//$sql = "INSERT INTO accounts (username, email, passwords) VALUES (:uname, :email, :pwd)";
+				// Insert some values
+				$mysqli -> query("INSERT INTO account (name,email,password)
+				VALUES ('$uname','$email','$pwd')");
+				
 
-			// $stmt = $conn->prepare("INSERT INTO accounts (username, email, passwords) VALUES (?, ?, ?,?,?,?,?,?)");
-			// $stmt->bind_param("sss",$username, $email, $password);
+				// Commit transaction
+				if (!$mysqli -> commit()) {
+				echo "Commit transaction failed";
+				exit();
+				}
 
-			// $username = $uname;
-			// $email = $email;
-			// $password = $pwd;
-			// $stmt->execute();
+				$mysqli -> close();
 
-		    //  if($stmt){
-				 
-			// 	 echo "$username - $email - $password ";
-			//  }
-
-			// $stmt->close();
-			$conn->close(); 
-
-
-				// $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
-			 
-				// if(! $conn ) {
-				//    die('Could not connect: ' . mysqli_error());
-				// }
-	   
-				// $sql = "INSERT INTO accounts ".
-				//    "(username,email, passwords) "."VALUES ".
-				//    "('$uname','$email','$pwd')";
-				//    mysqli_select_db('accounts');
-				// $retval = mysqli_query( $sql, $conn );
-			 
-				// if(! $retval ) {
-				//    die('Could not enter data: ' . mysqli_error());
-				// }
-			 
-				// echo "Entered data successfully\n";
-				// mysqli_close($conn);
-
+				
 }
 
 
