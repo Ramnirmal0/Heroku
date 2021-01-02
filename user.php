@@ -24,8 +24,8 @@ if(isset($_POST)){
 				$mysqli -> autocommit(FALSE);
 
 				// Insert some values
-				$mysqli -> query("INSERT INTO users (username,email,password)
-				VALUES ('".$uname."','".$email."','".$pwd."')");
+				$mysqli -> query("INSERT INTO users (username,email,password,name,dob,location,mob)
+				VALUES ('".$uname."','".$email."','".$pwd."','','','','')");
 				
 
 				// Commit transaction
