@@ -8,11 +8,6 @@ if(isset($_POST)){
 				$email = $_POST['emailid'];
 				$pwd = sha1($_POST['passwords']);
 
-				echo var_dump($uname);
-				echo var_dump($email);
-				echo var_dump($pwd);
-
-
 				// $dbhost = 'remotemysql.com';
 				// $dbuser = 'QExKt8jTh3';
 				// $dbpass = 'XqrylbkApz';
@@ -29,7 +24,7 @@ if(isset($_POST)){
 				$mysqli -> autocommit(FALSE);
 
 				// Insert some values
-				$mysqli -> query("INSERT INTO account (name,email,password)
+				$mysqli -> query("INSERT INTO users (username,email,password)
 				VALUES ('".$uname."','".$email."','".$pwd."')");
 				
 
