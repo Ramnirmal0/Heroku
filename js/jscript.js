@@ -29,7 +29,8 @@ $(function(){
                         'title': 'Successful',
                         'text': data,
                         'type': 'success'
-                        })     
+                        })
+                        window.location.href = "../login.php";     
                 },
                 error: function(data){
                     Swal.fire({
