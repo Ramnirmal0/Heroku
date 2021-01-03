@@ -1,16 +1,9 @@
 <?php
-
+session_start();
 if(isset($_POST)){
-
-	
-					
+		
     $uname= $_POST['userid'];
     $pwd = sha1($_POST['pwd']);
-
-    // $dbhost = 'remotemysql.com';
-    // $dbuser = 'QExKt8jTh3';
-    // $dbpass = 'XqrylbkApz';
-    // $database = 'QExKt8jTh3';
 
     $mysqli = new mysqli("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3");
 
@@ -22,16 +15,16 @@ if(isset($_POST)){
     // Turn autocommit off
     $mysqli -> autocommit(FALSE);
 
-    // Insert some values
-    $mysqli -> query("INSERT INTO users (username,email,password,name,dob,location,mob)
-    VALUES ('".$uname."','".$email."','".$pwd."','','','','')");
-    
-
-    // Commit transaction
-    if (!$mysqli -> commit()) {
-    echo "Commit transaction failed";
-    exit();
+    // // Insert some values
+    $sql = "SELECT * FROM users where email='".$uname."' and password='".$pwd."'";
+    if ($result = $mysqli -> query($sql)) {
+        $_SESSION["ID"] = $row['email'];
+        $_SESSION["PWD"]=$row['password'];
     }
+    else{
+        exit();
+    }
+
 
     $mysqli -> close();
     

@@ -63,17 +63,12 @@ $(function(){
             url: '../user.php',
             data: {userid: userid,pwd: pwd},
             success: function(data){
-                Swal.fire({
-                    'title': 'Successful',
-                    'text': data,
-                    'type': 'success'
-                    })
-                    window.location.href = "../login.php";     
+                    window.location.href = "../account.php";     
             },
             error: function(data){
                 Swal.fire({
                         'title': 'Errors',
-                        'text': data,
+                        'text': "Invalid User ! Register now",
                         'type': 'error'
                         })
             }
