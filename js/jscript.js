@@ -45,7 +45,42 @@ $(function(){
             alert("fill the form completely");
 
         }
-    });		
+    });	
+    
+    
+    $('#login').click(function(e){
+
+        var valid_check = this.form.checkValidity();
+
+        if(valid_check){
+            var userid=$('#userid').val();
+            var pwd = $('#pwd').val();
+        }
+        e.preventDefault();
+
+        $.ajax({
+            type: 'POST',
+            url: '../user.php',
+            data: {username: username,emailid: emailid,passwords: passwords},
+            success: function(data){
+                Swal.fire({
+                    'title': 'Successful',
+                    'text': data,
+                    'type': 'success'
+                    })
+                    window.location.href = "../login.php";     
+            },
+            error: function(data){
+                Swal.fire({
+                        'title': 'Errors',
+                        'text': data,
+                        'type': 'error'
+                        })
+            }
+        });	
+
+
+    });	
 
     
 });
