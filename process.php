@@ -18,10 +18,9 @@
         $result = $mysqli -> query("SELECT * FROM Persons WHERE email='".$uname."' and password='".$pwd."'");
         $output=$result -> num_rows;
         if(output==1){
-            echo "Access granted";
+            header('Location: account.php');
         }
         else{
-            echo"Request Denied";
             exit();
         }
 
