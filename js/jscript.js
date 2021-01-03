@@ -61,7 +61,7 @@ $(function(){
         $.ajax({
             type: 'POST',
             url: '../user.php',
-            data: {username: username,emailid: emailid,passwords: passwords},
+            data: {userid: userid,pwd: pwd},
             success: function(data){
                 Swal.fire({
                     'title': 'Successful',
