@@ -16,15 +16,18 @@ if(isset($_POST)){
     $mysqli -> autocommit(FALSE);
 
     // // Insert some values
-    $sql = "SELECT * FROM users where email='".$uname."' and password='".$pwd."'";
-    if ($result = $mysqli -> query($sql)) {
-        $_SESSION["ID"] = $row['email'];
-        $_SESSION["PWD"]=$row['password'];
-        header("location: account.php");
-    }
-    else{
-        exit();
-    }
+        $sql="SELECT email , password FROM users WHERE username='$uname' and password='$pwd'";
+        $result=mysqli_query($db,$sql);
+        $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+        if(mysqli_num_rows($result) == 1)
+        {
+        $_SESSION['email'] = $uname; // Initializing Session
+        header("location: ../account.php"); // Redirecting To Other Page
+        }else
+        {
+        $error = "Incorrect username or password.";
+        }
 
 
     $mysqli -> close();
