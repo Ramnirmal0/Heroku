@@ -60,7 +60,7 @@ $(function(){
 
         $.ajax({
             type: 'POST',
-            url: '../user.php',
+            url: '../process.php',
             data: {userid: userid,pwd: pwd},
             success: function(data){
                     // window.location.href = "../account.php";     
