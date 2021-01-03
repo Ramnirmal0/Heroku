@@ -63,7 +63,7 @@ $(function(){
             url: '../user.php',
             data: {userid: userid,pwd: pwd},
             success: function(data){
-                    window.location.href = "../account.php";     
+                    // window.location.href = "../account.php";     
             },
             error: function(data){
                 Swal.fire({

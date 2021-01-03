@@ -20,6 +20,7 @@ if(isset($_POST)){
     if ($result = $mysqli -> query($sql)) {
         $_SESSION["ID"] = $row['email'];
         $_SESSION["PWD"]=$row['password'];
+        header("location: account.php");
     }
     else{
         exit();
