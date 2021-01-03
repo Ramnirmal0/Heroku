@@ -15,19 +15,25 @@ if(isset($_POST)){
     // Turn autocommit off
     $mysqli -> autocommit(FALSE);
 
-    // // Insert some values
-        $sql="SELECT email , password FROM users WHERE username='$uname' and password='$pwd'";
-        $result=mysqli_query($db,$sql);
-        $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+    // // // Insert some values
+    //     $sql="SELECT email , password FROM users WHERE username='$uname' and password='$pwd'";
+    //     $result=mysqli_query($db,$sql);
+    //     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-        if(mysqli_num_rows($result) == 1)
-        {
-        $_SESSION['email'] = $uname; // Initializing Session
-        header("location: ../account.php"); // Redirecting To Other Page
-        }else
-        {
-        $error = "Incorrect username or password.";
-        }
+    //     if(mysqli_num_rows($result) == 1)
+    //     {
+    //     $_SESSION['email'] = $uname; // Initializing Session
+    //     header("location: ../account.php"); // Redirecting To Other Page
+    //     }else
+    //     {
+    //     $error = "Incorrect username or password.";
+    //     }
+    // Perform query
+    $result = $mysqli -> query("SELECT * FROM users Where email='".$uname."' and password='".$pwd."');
+    if($result -> num_rows == 1){
+        $_SESSION ['email'] = $uname;
+        header('location: ../account.php');
+    }
 
 
     $mysqli -> close();
