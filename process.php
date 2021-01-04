@@ -15,7 +15,8 @@
         // Turn autocommit off
         $mysqli -> autocommit(FALSE);
 
-        $result = $mysqli -> query("SELECT * FROM Persons WHERE email='".$uname."' and password='".$pwd."'");
+        $result = $mysqli -> query("SELECT * FROM Persons WHERE email='user@mail.com' and password='5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8
+        '");
         $output=$result -> num_rows;
         if($output==1){
             echo "$output";
