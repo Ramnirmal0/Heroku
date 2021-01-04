@@ -72,7 +72,7 @@ $(function(){
             error: function(data){
                 Swal.fire({
                         'title': 'Errors',
-                        'text': "Invalid User ! Register now",
+                        'text': data,
                         'type': 'error'
                         })
             }
