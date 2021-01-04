@@ -27,8 +27,8 @@
         <div class="container-fluid">
         <center>
             <img src = "../img/build.gif" ><br><br>
-            <h3> Error 404 ! Page Not Found Exception </h3><br>
-            <h4>This page is under construction. please click back button to go back</h4>
+            <h1> Error 404 ! Page Not Found Exception </h3><br>
+            <h3>This page is currently under construction. please click back button to go back</h4>
         </center>
         </div>   
 
