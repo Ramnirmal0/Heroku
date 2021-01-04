@@ -15,7 +15,7 @@
         // Turn autocommit off
         $mysqli -> autocommit(FALSE);
         $mysqli->query("START TRANSACTION");
-        $query = "SELECT email , password FROM users WHERE email = '$uname' AND password = '$password' FOR UPDATE";
+        $query = "SELECT email , password FROM users WHERE email = '".$uname."' AND password = '".$password."' FOR UPDATE";
         $stmt = $mysqli->prepare($query);
         $stmt->execute();
         if(!$stmt->store_result())
