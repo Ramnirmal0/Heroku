@@ -63,11 +63,18 @@ $(function(){
             url: '../process.php',
             data: {userid: userid,pwd: pwd},
             success: function(data){
-                Swal.fire({
-                    'title': 'Login Failed',
-                    'text': data,
-                    'type': 'error'
-                    })
+                if(data == true){
+                    window.location.href = "../account.php";
+                }else{
+
+                    Swal.fire({
+                        'title': 'Login Failed',
+                        'text': data,
+                        'type': 'error'
+                        })
+                }
+
+                    
             },
             error: function(data){
                 Swal.fire({

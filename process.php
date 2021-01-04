@@ -22,11 +22,10 @@
             throw new Exception("Store failed: {$mysqli->error}");
         $output=$stmt->num_rows;
         if($output==1){
-            header('Location: account.php');
-            die();
+            return true;
         }
         else{
-            echo "$output Invalid Username and Password";
+            echo "Invalid Username and Password";
         }
 
         // Commit transaction
