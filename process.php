@@ -14,7 +14,7 @@
             }
 
             // Turn autocommit off
-            $conns -> autocommit(FALSE);
+            $conn -> autocommit(FALSE);
  
         // if (!$conn)
         // {
