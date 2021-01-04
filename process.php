@@ -18,7 +18,7 @@
         // Insert some values
         $mysqli -> query("SELECT email , password FROM users WHERE email='".$uname."'");
 
-        echo "$mysqli";
+        echo $mysqli;
         
 
         // Commit transaction
