@@ -2,8 +2,10 @@
     session_start();
     if(isset($_POST)){
     
-        $uname= $_POST['userid'];
-        $pwd = sha1($_POST['pwd']);
+        $dob= $_POST['dob'];
+        $location = $_POST['location'];
+        $mob = $_POST['mob'];
+        $email = $_SESSION["email"];
 
         $mysqli = new mysqli("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3");
 
@@ -15,20 +17,10 @@
         // Turn autocommit off
         $mysqli -> autocommit(FALSE);
         $mysqli->query("START TRANSACTION");
-        $query = "SELECT email , password FROM users WHERE email = '$uname' AND password = '$pwd' FOR UPDATE";
+        $query = "UPDATE users SET dob='$dob' ,location='$location', mob='$mob' WHERE email='$email' FOR UPDATE";
         $stmt = $mysqli->prepare($query);
         $stmt->execute();
-        if(!$stmt->store_result())
-            throw new Exception("Store failed: {$mysqli->error}");
-        $output=$stmt->num_rows;
-        if($output==1){
-            echo "1";
-            $_SESSION["email"] = $uname;
-        }
-        else{
-            echo "Invalid Username and Password";
-        }
-
+        
         // Commit transaction
         if (!$mysqli -> commit()) {
         echo "Commit transaction failed";

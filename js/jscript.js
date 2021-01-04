@@ -88,5 +88,40 @@ $(function(){
 
     });	
 
+
+    $('#continue').click(function(e){
+
+        var valid_check = this.form.checkValidity();
+
+        if(valid_check){
+            var dob=$('#dob').val();
+            var location = $('#location').val();
+            var mob = $('#mob').val();
+        }
+        e.preventDefault();
+
+        $.ajax({
+            type: 'POST',
+            url: '../update.php',
+            data: {dob: dob ,location: location , mob : mob},
+            success: function(data){
+                    Swal.fire({
+                        'title': 'Profile Updated',
+                        'text': data,
+                        'type': 'success'
+                        })      
+            },
+            error: function(data){
+                Swal.fire({
+                        'title': 'Errors',
+                        'text': "something went wrong with database",
+                        'type': 'error'
+                        })
+            }
+        });	
+
+
+    });
+
     
 });
