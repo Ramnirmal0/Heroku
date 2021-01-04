@@ -68,8 +68,6 @@ $(function(){
                     'text': data,
                     'type': 'success'
                     })
-                    window.location.href = "../account.php";     
- 
             },
             error: function(data){
                 Swal.fire({

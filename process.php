@@ -19,10 +19,10 @@
         '");
         $output=$result -> num_rows;
         if($output==1){
-            echo "$output";
+            header('Location: ../account.php');
         }
         else{
-            exit();
+            echo "error finding . output is $output ";
         }
 
         $mysqli -> close(); 
