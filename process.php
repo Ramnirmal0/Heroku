@@ -12,7 +12,7 @@
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
 
-        $stmt = $conn->prepare("SELECT email, password FROM register_users where email='$uname' and password = '$pwd'");
+        $stmt = $conn->prepare("SELECT `email`, `password` FROM users where email='$uname' and password = '$pwd'");
         
             /* execute statement */
             $stmt->execute();
