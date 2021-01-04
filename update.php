@@ -21,6 +21,7 @@
         $query = "UPDATE users SET name='$fullname' ,dob='$dob' ,location='$location', mob='$mob' WHERE email='$email'";
         $stmt = $mysqli->prepare($query);
         $stmt->execute();
+        $_SESSION["name"] = $fullname;
         
         // Commit transaction
         if (!$mysqli -> commit()) {

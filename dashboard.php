@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -42,8 +42,9 @@
             <br>
             <div class="container-fluid" >
                 <?php
+                $name= $_SESSION["name"];
 
-                echo"Welcome User ! get started";
+                echo "Welcome  $name ! Let's get started";
                 
                 ?>
                 

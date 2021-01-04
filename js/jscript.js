@@ -106,11 +106,7 @@ $(function(){
             url: '../update.php',
             data: {fullname : fullname ,dob: dob ,location: location , mob : mob},
             success: function(data){
-                    Swal.fire({
-                        'title': 'Profile Updated',
-                        'text': data,
-                        'type': 'success'
-                        })
+
                         window.location.href = "../dashboard.php";      
             },
             error: function(data){
