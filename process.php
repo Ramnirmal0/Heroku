@@ -22,7 +22,7 @@
             throw new Exception("Store failed: {$mysqli->error}");
         $output=$stmt->num_rows;
         if($output==1){
-            return true;
+            echo "1";
         }
         else{
             echo "Invalid Username and Password";

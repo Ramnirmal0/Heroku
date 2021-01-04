@@ -63,7 +63,7 @@ $(function(){
             url: '../process.php',
             data: {userid: userid,pwd: pwd},
             success: function(data){
-                if(data == true){
+                if(data == '1'){
                     window.location.href = "../account.php";
                 }else{
 
