@@ -14,7 +14,7 @@
             }
 
             // Turn autocommit off
-            $conn -> autocommit(FALSE);
+            $conns -> autocommit(FALSE);
  
         // if (!$conn)
         // {
@@ -69,6 +69,6 @@
         //     echo "error finding . output is $result ";
         // }
 
-        // $mysqli -> close(); 
+         $mysqli -> close(); 
     }
 ?>
