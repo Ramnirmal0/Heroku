@@ -22,7 +22,7 @@
             header('Location: ../account.php');
         }
         else{
-            echo "error finding . output is". $result -> num_rows ;
+            echo "error finding . output is $result ";
         }
 
         $mysqli -> close(); 
