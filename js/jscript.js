@@ -110,7 +110,8 @@ $(function(){
                         'title': 'Profile Updated',
                         'text': data,
                         'type': 'success'
-                        })      
+                        })
+                        window.location.href = "../dashboard.php";      
             },
             error: function(data){
                 Swal.fire({
