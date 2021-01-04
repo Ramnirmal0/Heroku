@@ -50,7 +50,7 @@ session_start();
                 
                     <center>
                     <br>
-                    <a class="btn btn-danger" href="#"> Logout </a>
+                    <a class="btn btn-danger" href="../logout.php"> Logout </a>
 
                     <br><br>
                     <div class="card" style="width: 20rem;">
