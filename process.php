@@ -7,11 +7,19 @@
 
         // $conn = mysqli_connect("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3") ;
         $conn = new mysqli("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3");
+
+        if ($conn -> connect_errno) {
+            echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+            exit();
+            }
+
+            // Turn autocommit off
+            $conns -> autocommit(FALSE);
  
-        if (!$conn)
-        {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        }
+        // if (!$conn)
+        // {
+        // echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        // }
 
         $stmt = $conn->prepare("SELECT `email`, `password` FROM` users` WHERE `email`='$uname' and `password` = '$pwd'");
         
