@@ -5,7 +5,8 @@
         $uname= $_POST['userid'];
         $pwd = sha1($_POST['pwd']);
 
-        $conn = mysqli_connect("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3") ;
+        // $conn = mysqli_connect("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3") ;
+        $conn = new mysqli("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3");
  
         if (!$conn)
         {
