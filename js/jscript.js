@@ -64,15 +64,15 @@ $(function(){
             data: {userid: userid,pwd: pwd},
             success: function(data){
                 Swal.fire({
-                    'title': 'Successful',
+                    'title': 'Login Failed',
                     'text': data,
-                    'type': 'success'
+                    'type': 'error'
                     })
             },
             error: function(data){
                 Swal.fire({
                         'title': 'Errors',
-                        'text': data,
+                        'text': "something went wrong with database",
                         'type': 'error'
                         })
             }

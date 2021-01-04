@@ -20,7 +20,7 @@
         $stmt->execute();
         if(!$stmt->store_result())
             throw new Exception("Store failed: {$mysqli->error}");
-        if($stmt->num_rows==1){
+        if(($stmt->num_rows)==1){
             header('Location: ../account.php');
         }
         else{
