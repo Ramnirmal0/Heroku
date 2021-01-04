@@ -2,6 +2,7 @@
     session_start();
     if(isset($_POST)){
     
+        $fullname= $_POST['fullname'];
         $dob= $_POST['dob'];
         $location = $_POST['location'];
         $mob = $_POST['mob'];
@@ -17,7 +18,7 @@
         // Turn autocommit off
         $mysqli -> autocommit(FALSE);
         $mysqli->query("START TRANSACTION");
-        $query = "UPDATE users SET dob='$dob' ,location='$location', mob='$mob' WHERE email='$email'";
+        $query = "UPDATE users SET name='$fullname' ,dob='$dob' ,location='$location', mob='$mob' WHERE email='$email'";
         $stmt = $mysqli->prepare($query);
         $stmt->execute();
         

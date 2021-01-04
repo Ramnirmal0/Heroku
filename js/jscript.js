@@ -94,6 +94,7 @@ $(function(){
         var valid_check = this.form.checkValidity();
 
         if(valid_check){
+            var fullname=$('#fullname').val();
             var dob=$('#dob').val();
             var location = $('#location').val();
             var mob = $('#mob').val();
@@ -103,7 +104,7 @@ $(function(){
         $.ajax({
             type: 'POST',
             url: '../update.php',
-            data: {dob: dob ,location: location , mob : mob},
+            data: {fullname : fullname ,dob: dob ,location: location , mob : mob},
             success: function(data){
                     Swal.fire({
                         'title': 'Profile Updated',
