@@ -17,7 +17,7 @@
         // Turn autocommit off
         $mysqli -> autocommit(FALSE);
         $mysqli->query("START TRANSACTION");
-        $query = "UPDATE users SET dob='$dob' ,location='$location', mob='$mob' WHERE email='$email' FOR UPDATE";
+        $query = "UPDATE users SET dob='$dob' ,location='$location', mob='$mob' WHERE email='$email'";
         $stmt = $mysqli->prepare($query);
         $stmt->execute();
         
