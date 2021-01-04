@@ -63,6 +63,12 @@ $(function(){
             url: '../process.php',
             data: {userid: userid,pwd: pwd},
             success: function(data){
+                Swal.fire({
+                    'title': 'Successful',
+                    'text': data,
+                    'type': 'success'
+                    })
+                    window.location.href = "../account.php";     
  
             },
             error: function(data){

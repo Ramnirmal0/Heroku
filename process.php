@@ -17,8 +17,8 @@
 
         $result = $mysqli -> query("SELECT * FROM Persons WHERE email='".$uname."' and password='".$pwd."'");
         $output=$result -> num_rows;
-        if(output==1){
-            header('Location: account.php');
+        if($output==1){
+            echo "$output";
         }
         else{
             exit();
