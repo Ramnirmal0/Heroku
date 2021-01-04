@@ -12,7 +12,7 @@
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
         }
 
-        $stmt = $conn->prepare("SELECT `email`, `password` FROM users where email='$uname' and password = '$pwd'");
+        $stmt = $conn->prepare("SELECT `email`, `password` FROM` users` WHERE `email`='$uname' and `password` = '$pwd'");
         
             /* execute statement */
             $stmt->execute();
@@ -26,7 +26,7 @@
                 
             }
         
-        if($user == $username)
+        if($user == $uname)
                 {
                 $_SESSION['name'] = $user;
                 // Redirect user to index.php
