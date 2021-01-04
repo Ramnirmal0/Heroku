@@ -25,7 +25,7 @@
     </head>
     <body>
         <div class="container-fluid">
-        <center>
+        <center><br><br><br><br>
             <img src = "../img/build.gif" ><br><br>
             <h1 style ="background-color:white;"><b> Error 404 ! Page Not Found Exception </b></h3><br>
             <h3 style ="background-color:white;">This page is currently under construction. please click back button to go back</h4>
