@@ -14,12 +14,13 @@
 
         // Turn autocommit off
         $mysqli -> autocommit(FALSE);
-
-        // Insert some values
-        $mysqli -> query("SELECT email , password FROM users WHERE email='".$uname."'");
-
-        
-        
+        $mysqli->query("START TRANSACTION");
+        $query = "SELECT email , password FROM users WHERE email = '$uname' AND password = '$password' FOR UPDATE";
+        $stmt = $mysqli->prepare($query);
+        $stmt->execute();
+        if(!$stmt->store_result())
+            throw new Exception("Store failed: {$mysqli->error}");
+        echo "Got {$stmt->num_rows} for $name\n";
 
         // Commit transaction
         if (!$mysqli -> commit()) {
