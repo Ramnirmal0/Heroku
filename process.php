@@ -6,7 +6,7 @@
         $pwd = sha1($_POST['pwd']);
 
         // $conn = mysqli_connect("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3") ;
-        $conn = new mysqli("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3");
+        $mysqli = new mysqli("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3");
 
         if ($conn -> connect_errno) {
             echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
@@ -21,33 +21,33 @@
         // echo "Failed to connect to MySQL: " . mysqli_connect_error();
         // }
 
-        $stmt = $conn->prepare("SELECT `email`, `password` FROM` users` WHERE `email`='$uname' and `password` = '$pwd'");
+        // $stmt = $conn->prepare("SELECT `email`, `password` FROM` users` WHERE `email`='$uname' and `password` = '$pwd'");
         
-            /* execute statement */
-            $stmt->execute();
+        //     /* execute statement */
+        //     $stmt->execute();
         
-            /* bind result variables */
-            $stmt->bind_result($user, $pass);
+        //     /* bind result variables */
+        //     $stmt->bind_result($user, $pass);
         
-            /* fetch values */
-            while ($stmt->fetch()) 
-            {
+        //     /* fetch values */
+        //     while ($stmt->fetch()) 
+        //     {
                 
-            }
+        //     }
         
-        if($user == $uname)
-                {
-                $_SESSION['name'] = $user;
-                // Redirect user to index.php
-                header("Location: account.php");
-                }
-                else
-                {
-                    echo "Your username or password is wrong";
-                }
+        // if($user == $uname)
+        //         {
+        //         $_SESSION['name'] = $user;
+        //         // Redirect user to index.php
+        //         header("Location: account.php");
+        //         }
+        //         else
+        //         {
+        //             echo "Your username or password is wrong";
+        //         }
         
         
-        $stmt->close();
+        // $stmt->close();
 
         // $mysqli = new mysqli("remotemysql.com","QExKt8jTh3","XqrylbkApz","QExKt8jTh3");
 
